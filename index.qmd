@@ -1,6 +1,6 @@
 ---
 title: "Bayesian Methods for Causal Effect Estimation"
-subtitle: "2026 CSSC Skills Workshop"
+subtitle: "2026 CSSC Scientific Workshop"
 format: 
   clean-revealjs:
     css: style.css
