@@ -1,7 +1,7 @@
 # Bayesian Methods for Causal Effect Estimation
 ### 2026 CSSC Skills Workshop
 
-**Instructor:** Kuan Liu, University of Toronto ([kuan.liu@utoronto.ca](mailto:kuan.liu@utoronto.ca))  
+**Instructor:** Kuan Liu, University of Toronto
 **Date:** May 30, 2026  
 **Duration:** 50 minutes
 
@@ -15,7 +15,7 @@ This workshop bridges that gap and is suitable for anyone with familiarity with 
 
 Working through simulated and real data examples in R, we cover:
 
-- Bayesian g-computation — parametric and nonparametric (BART)
+- Bayesian g-computation
 - Bayesian propensity score weighting
 - Bayesian marginal structural models for time-varying treatments
 - Bayesian sensitivity analysis for unmeasured confounding (latent variable approach)
