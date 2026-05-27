@@ -1,5 +1,5 @@
 # Bayesian Methods for Causal Effect Estimation
-### 2026 CSSC Skills Workshop
+### 2026 CSSC Scientific Workshop
 
 **Instructor:** Kuan Liu, University of Toronto  
 **Date:** May 30, 2026  
