@@ -1,0 +1,170 @@
+/*  GLOBAL FONT SIZE (body text only, not code)  */
+.reveal .slides {
+  font-size: 1em !important;
+}
+
+/*  SLIDE TOP MARGIN / PADDING  */
+.reveal .slides section,
+.reveal .slides section.present {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.reveal .slide-content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/*  HEADINGS  */
+.reveal .slides section h1 {
+  font-size: 1.8em !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.2em !important;
+  padding-top: 0 !important;
+}
+
+.reveal .slides section h2 {
+  font-size: 1.5em !important;
+  margin-top: 0em !important;
+  margin-bottom: 0.5em !important;
+  padding-top: 0 !important;
+}
+
+.reveal .slides section h3 {
+  font-size: 1.0em !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.1em !important;
+}
+
+/*  PARAGRAPHS  */
+.reveal .slides section p {
+  margin-top: 0.3em !important;
+  margin-bottom: 0.3em !important;
+  line-height: 1.3 !important;
+}
+
+/*  LISTS  */
+.reveal .slides ul,
+.reveal .slides ol {
+  margin-top: 0.05em !important;
+  margin-bottom: 0.05em !important;
+  line-height: 1.3 !important;
+}
+
+.reveal .slides li {
+  margin-bottom: 0.1em !important;
+  line-height: 1.3 !important;
+}
+
+/*  FRAGMENTS  */
+.reveal .slides section .fragment,
+.reveal .slides section > div.fragment {
+  margin-top: 0.2em !important;
+  margin-bottom: 0.1em !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/*  ALL DIV WRAPPERS (fenced divs from :::)  */
+.reveal .slides section > div {
+  margin-top: 0.2em !important;
+  margin-bottom: 0.1em !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/*  CALLOUT BOXES  */
+.callout {
+  margin-top: 0.1em !important;
+  margin-bottom: 0.1em !important;
+  padding-top: 0.1em !important;
+  padding-bottom: 0.1em !important;
+}
+
+.callout-body {
+  padding-top: 0.15em !important;
+  padding-bottom: 0.1em !important;
+}
+
+.callout-title {
+  padding-top: 0.1em !important;
+  padding-bottom: 0em !important;
+  margin-bottom: 0em !important;
+}
+
+/*  MATH  */
+.reveal .slides .math {
+  font-size: 0.8em !important;
+  margin-top: -0.2em !important;
+  margin-bottom: -0.2em !important;
+}
+
+/* CODE BLOCKS */
+.reveal pre {
+  font-size: 0.9em !important;
+  margin-top: 0.2em !important;
+  margin-bottom: 0.2em !important;
+  max-height: 400px;
+  overflow-y: auto !important;   /* scroll only here */
+  line-height: 1.3 !important;
+}
+
+.reveal pre code {
+  font-size: 0.9em !important;
+  max-height: none !important;   /* remove height limit */
+  overflow-y: visible !important; /* no inner scroll */
+  line-height: 1.3 !important;
+}
+
+/* inline code */
+.reveal code:not(pre code) {
+  font-size: 1em !important;
+}
+
+/*  TABLES  */
+.reveal table {
+  font-size: 0.9em !important;
+  margin-top: 0.1em !important;
+  margin-bottom: 0.1em !important;
+  line-height: 1.2 !important;
+}
+
+.reveal table th,
+.reveal table td {
+  padding: 0.2em 0.5em !important;
+}
+
+/*  MERMAID DIAGRAMS  */
+.reveal .mermaid {
+  margin-top: 0.1em !important;
+  margin-bottom: 0.1em !important;
+}
+
+/*  PANEL TABSET  */
+.reveal .panel-tabset {
+  margin-top: 0.1em !important;
+}
+
+.reveal .panel-tabset .tab-content {
+  padding-top: 0.1em !important;
+}
+
+/*  UTILITY CLASSES for per-slide overrides  */
+.tight {
+  margin-top: 0em !important;
+  line-height: 1.2 !important;
+}
+
+.callout-tight {
+  margin-top: 0em !important;
+}
+
+.small-text {
+  font-size: 0.9em !important;
+}
+
+/* Tighten space between text and the equation below it */
+.reveal .slides section p + mjx-container,
+.reveal .slides section li + mjx-container {
+  margin-top: -0.5em !important;
+}
