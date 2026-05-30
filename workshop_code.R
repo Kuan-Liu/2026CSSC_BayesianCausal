@@ -13,6 +13,7 @@ library(rstanarm)
 library(rstan)
 library(BART)
 library(gtools)       # for rdirichlet()
+library(MCMCpack)
 options(mc.cores = parallel::detectCores())
 rstan_options(auto_write = TRUE)
 
@@ -165,9 +166,18 @@ sw_draws <- ifelse(
   (1-p_treat) / (1 - ps_draws))
 
 # Weighted outcome model per posterior weight draw
-psi_ipw <- numeric(M_ps)
-for(m in 1:M_ps){
-  fit_m      <- lm(Y_death ~ A, data = rhc, weights = sw_draws[m,])
+n <- nrow(rhc)
+psi_ipw <- numeric(M)
+
+for(m in 1:M){
+  # Draw Bayesian bootstrap weights from Dir(1_n)
+  bb_weights <- as.numeric(rdirichlet(1, rep(1, n)))
+  
+  # Combine BB weights with posterior IPW weights
+  combined_weights <- bb_weights * sw_draws[m, ]
+  combined_weights <- combined_weights / mean(combined_weights)  # normalize
+  
+  fit_m      <- lm(Y_death ~ A, data = rhc, weights = combined_weights)
   psi_ipw[m] <- coef(fit_m)["A"]
 }
 

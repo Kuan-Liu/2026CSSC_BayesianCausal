@@ -399,9 +399,18 @@ sw_draws <- ifelse(rhc$A == 1,
 
 ```{.r code-line-numbers="|1-7"}
 # Step 4: Fit weighted outcome model per posterior weight draw
+n <- nrow(rhc)
 psi_ipw <- numeric(M)
+
 for(m in 1:M){
-  fit_m      <- lm(Y_death ~ A, data = rhc, weights = sw_draws[m,])
+  # Draw Bayesian bootstrap weights from Dir(1_n)
+  bb_weights <- as.numeric(rdirichlet(1, rep(1, n)))
+  
+  # Combine BB weights with posterior IPW weights
+  combined_weights <- bb_weights * sw_draws[m, ]
+  combined_weights <- combined_weights / mean(combined_weights)  # normalize
+  
+  fit_m      <- lm(Y_death ~ A, data = rhc, weights = combined_weights)
   psi_ipw[m] <- coef(fit_m)["A"]
 }
 
