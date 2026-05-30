@@ -6,7 +6,7 @@ format:
     css: style.css
 title-slide-attributes:
   data-background-image: liveslides_QR.png
-  data-background-size: 250px
+  data-background-size: 200px
   data-background-position: 85% 75%
 html-math-method:
   method: mathjax
