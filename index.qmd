@@ -4,7 +4,10 @@ subtitle: "2026 CSSC Scientific Workshop"
 format: 
   clean-revealjs:
     css: style.css
-footer: "Bayesian Causal Inference Workshop"
+title-slide-attributes:
+  data-background-image: liveslides_QR.png
+  data-background-size: 250px
+  data-background-position: 85% 75%
 html-math-method:
   method: mathjax
   url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
@@ -26,7 +29,7 @@ opts_chunk$set(echo = TRUE, eval = FALSE, warning = FALSE, message = FALSE)
 
 **Part II** &nbsp; Bayesian G-computation & Propensity Score Weighting
 
-**Part III** &nbsp; Bayesian G-computation & MSMs for Time-Varying Treatments
+**Part III** &nbsp; Bayesian MSMs for Time-Varying Treatments
 
 **Part IV** &nbsp; Bayesian Sensitivity Analysis for Unmeasured Confounding
 
@@ -36,6 +39,10 @@ opts_chunk$set(echo = TRUE, eval = FALSE, warning = FALSE, message = FALSE)
 ```r
 install.packages(c("rstanarm","rstan","BART","bcf","bayesmsm","gtools"))
 ```
+:::
+
+::: {style="font-size:0.9em; margin-top:5em;"}
+Full workshop materials: <https://github.com/Kuan-Liu/2026CSSC_BayesianCausal/>
 :::
 
 # Part I: Fundamentals of Causal Inference
@@ -55,6 +62,7 @@ install.packages(c("rstanarm","rstan","BART","bcf","bayesmsm","gtools"))
 ::: {.fragment}
 - [Statistical causal inference methods]{.alert} recover causal estimates from observational data by explicitly modelling the treatment assignment mechanism.
 :::
+
 
 ## Potential outcomes {transition="slide"}
 
